@@ -1,0 +1,15 @@
+{% load webpack_loader static %}
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HotDj</title>
+        {% stylesheet_pack 'turbo_drive' %}
+        {% javascript_pack 'turbo_drive' attrs='defer' %}
+    </head>
+    <body>
+        {% block content %}
+        {% endblock content %}
+    </body>
+</html>
