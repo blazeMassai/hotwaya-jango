@@ -1,15 +1,17 @@
 
 {% extends "turbo_drive/base.html" %}
 {% load crispy_forms_tags %}
-
+{% load tailwind_filters %}
 {% block content %}
 
         <div class="w-full max-w-7xl mx-auto px-4 py-4">
-            <form method="post">
+            <div class="grid grid-cols-2 gap-4">
+                <form method="post">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button type="submit" class="btn-blue" value="Submit">Submit</button>
+                <button type="submit" class="btn-blue mt-3 rounded-full" value="Submit">Submit</button>
             </form>
+            </div>
         </div>
 
 {% endblock %}

@@ -9,6 +9,7 @@ python-webpack-boilerplate = "*"
 psycopg2 = "*"
 crispy-tailwind = "*"
 django-crispy-forms = "*"
+placeholder = "*"
 
 [dev-packages]
 
