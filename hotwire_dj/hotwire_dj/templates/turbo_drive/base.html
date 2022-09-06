@@ -3,13 +3,26 @@
 <html lang="">
     <head>
         <meta charset="utf-8" />
+        <link rel="icon" type="image/x-icon" href="{% static 'vendors/images/favicon.ico' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HotDj</title>
+        <title>HotDj  | {% block title %}{% endblock title%}</title>
+
+        {% block extra_top_js %}
+        {% endblock %}
+
         {% stylesheet_pack 'turbo_drive' %}
         {% javascript_pack 'turbo_drive' attrs='defer' %}
     </head>
     <body>
+
+        {% include 'turbo_drive/navbar.html' %}
+        {% include 'turbo_drive/messages.html' %}
+
         {% block content %}
         {% endblock content %}
+
+        {% block extra_bottom_js %}
+        {% endblock %}
+
     </body>
 </html>

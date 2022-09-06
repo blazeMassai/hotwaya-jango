@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_tailwind',
     'hotwire_dj.tasks',
-    'hotwire_dj.turbo_drive'
-
+    'hotwire_dj.turbo_drive',
 ]
 
 MIDDLEWARE = [

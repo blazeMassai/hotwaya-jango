@@ -1,0 +1,72 @@
+{% load webpack_loader static %}
+<!--<nav class="flex items-center font-lg justify-between flex-wrap bg-teal-500 p-6 mb-4">-->
+<!--    <div class="max-w-6xl mx-auto px-4">-->
+<!--        <a href="{% url 'home' %}" class="inline-block mt-0 text-teal-200 hover:text-white mr-4" aria-current="page">-->
+<!--                Home-->
+<!--        </a>-->
+<!--        <a href="{% url 'turbo-drive:task-list' %}" class="inline-block mt-0 text-teal-200 hover:text-white mr-4">-->
+<!--                List-->
+<!--        </a>-->
+
+<!--        <a href="{% url 'turbo-drive:task-create' %}" class="inline-block mt-0 text-teal-200 hover:text-white mr-4">-->
+<!--            Create-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</nav>-->
+
+
+
+<nav class="bg-teal-500 shadow-lg">
+		<div class="max-w-6xl mx-auto px-4">
+			<div class="flex justify-between">
+				<div class="flex space-x-7">
+					<!-- Website Logo -->
+					<div>
+						<a href="{% url 'home' %}" class="flex items-center py-4 px-2">
+							<img src="{% static 'vendors/images/notepad.png' %}" alt="Logo" class="h-8 w-8 mr-2" />
+							<span class="text-xl font-semibold whitespace-nowrap dark:text-white"
+								>Tasker</span
+							>
+						</a>
+					</div>
+					<!-- Primary Navbar items -->
+					<div class="md:flex items-center space-x-1">
+						<a
+							  {% if '/' in request.path %}
+								 class="py-4 px-2 text-teal-200 border-b-4 border-white-200 font-semibold"
+							  {% else %}
+								 class="py-4 px-2 text-teal-200  border-white-500 font-semibold"
+							  {% endif %}
+
+							href="{% url 'home' %}">
+
+							Home</a>
+
+						<a
+
+							{% if 'list' in request.path %}
+								 class="py-4 px-2 text-teal-200 border-b-4 border-white-500 font-semibold"
+							  {% else %}
+								 class="py-4 px-2 text-teal-200  border-white-500 font-semibold"
+						    {% endif %}
+
+							href="{% url 'turbo-drive:task-list' %}">
+
+							Task List</a>
+						<a
+
+							{% if 'create' in request.path %}
+								 class="py-4 px-2 text-teal-200 border-b-4 border-white-500 font-semibold"
+							  {% else %}
+								 class="py-4 px-2 text-teal-200  border-white-500 font-semibold"
+						    {% endif %}
+
+							href="{% url 'turbo-drive:task-create' %}"
+
+							>Create Task</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>

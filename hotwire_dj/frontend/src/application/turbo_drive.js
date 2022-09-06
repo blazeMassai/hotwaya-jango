@@ -6,6 +6,15 @@ import "@hotwired/turbo";
 // Bootstrap, please feel free to remove it.
 import "bootstrap/dist/js/bootstrap.bundle";
 
+//here we are implementing turbo cache
+// document.addEventListener("turbo:before cache", function () {
+//   console.log("turbo:before cache");
+//
+//   const form = document.querySelector('form');
+//   if(form) {
+//     form.reset();
+//   }
+// });
 
 window.document.addEventListener("DOMContentLoaded", function () {
   window.console.log("dom ready 1");

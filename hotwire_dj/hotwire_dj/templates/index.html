@@ -1,31 +1,24 @@
-{% load webpack_loader static %}
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Index</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% stylesheet_pack 'turbo_drive' %}
-        {% javascript_pack 'turbo_drive' attrs='defer' %}
-    </head>
-    <body>
-        <div class="jumbotron py-5">
-            <div class="w-full max-w-7xl mx-auto px-4">
+
+{% extends "turbo_drive/base.html" %}
+{% load webpack_loader static %}
+{% block title %} Home {% endblock title %}
+{% load crispy_forms_tags %}
+{% load tailwind_filters %}
+{% block content %}
+
+
+        <div class="jumbotron py-5 from-pink-500 to-orange-400">
+            <div class="w-full max-w-7xl mx-auto px-4 ">
+
                 <h1 class="text-4xl mb-4">Hello, Blessed!</h1>
 
-                    <p class="mb-4">This is a template for a simple marketing or informational website. It
-                    ,→includes a large callout called a
-                    jumbotron and three supporting pieces of content. Use it as a starting point to create
-                    ,→something more unique.</p>
-
-                    <p><a class="btn-blue mb-4" href="#" role="button">Learn more »</a></p>
+                    <p class="mb-4">There are three ways to ultimate success: The first way is to be kind. The second way is to be kind. The third way is to be kind.
 
                 <div class="flex justify-center">
-                    <img src="{% static 'vendors/images/webpack.png' %}" class="img-fluid"/>
+                    <img src="{% static 'vendors/images/cfm.png' %}" class="img-fluid"/>
                 </div>
             </div>
         </div>
 
-    </body>
-</html>
+{% endblock %}

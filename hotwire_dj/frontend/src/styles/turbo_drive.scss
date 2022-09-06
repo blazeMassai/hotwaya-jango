@@ -10,7 +10,7 @@
 
 .jumbotron {
   // should be relative path of the entry scss file
-  background-image: url("../../vendors/images/sample.jpg");
+  background-image: url("../../vendors/images/wave.jpg");
   background-size: cover;
 }
 
@@ -20,4 +20,14 @@
   @apply font-semibold rounded-lg shadow-md;
   @apply text-white bg-blue-500;
   @apply hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+}
+
+// This makes the page content little transparent, which tell user the page content is not truly read
+[data-turbo-preview] body { opacity: 0.5; }
+
+// turbo-progress-bar
+.turbo-progress-bar {
+  @apply bg-blue-500;
+
+  height: 5px;
 }
